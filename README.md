@@ -1,4 +1,5 @@
-wdi_project_3_fall_2014
-=======================
+##WDI Fall 2014 Project 3 :: Working Files
 
-working files for wdi fall 2014 project 3
+NOT FOR DEPLOYMENT! 
+
+Working files, initial API tests, code references, and app prototypes ONLY.
