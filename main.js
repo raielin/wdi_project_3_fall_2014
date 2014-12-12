@@ -71,34 +71,38 @@ function initialize() {
       mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
     }
   };
+
   map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
   map.mapTypes.set('map_style', styledMap);
   map.setMapTypeId('map_style');
 
   var rendererOptions = {
+    draggable: true,
     map: map
-  }
+  };
 
   directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);
   directionsDisplay.setMap(map);
+  directionsDisplay.setPanel(document.getElementById('steps'));
 }
 
 function calcRoute() {
   var start = document.getElementById('start').value;
   var end = document.getElementById('end').value;
   var request = {
-      origin:start,
-      destination:end,
+      origin: start,
+      destination: end,
       travelMode: google.maps.TravelMode.DRIVING
   };
-  directionsService.route(request, function(response, status) {
-    if (status == google.maps.DirectionsStatus.OK) {
-      directionsDisplay.setDirections(response);
-    }
-  });
+
+  directionsService.route(request, callback);
 }
 
-
+function callback(response, status) {
+  if (status == google.maps.DirectionsStatus.OK) {
+    directionsDisplay.setDirections(response);
+  }
+}
 
 google.maps.event.addDomListener(window, 'load', initialize);
