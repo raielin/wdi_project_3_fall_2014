@@ -28,12 +28,20 @@ Working files, initial API tests, code references, and app prototypes ONLY.
 **Maps**
 * google maps js API: https://developers.google.com/maps/documentation/javascript/tutorial
 * map styling: https://developers.google.com/maps/documentation/javascript/styling
+* lat/lng bounds class: https://developers.google.com/maps/documentation/javascript/reference#LatLngBounds
+* js reference: https://developers.google.com/maps/documentation/javascript/reference
 
 **Directions**
 * google maps API directions service: https://developers.google.com/maps/documentation/javascript/directions
 * goog directions API: https://developers.google.com/maps/documentation/directions/
+* directions result object: https://developers.google.com/maps/documentation/javascript/directions#DirectionsResults
+* inspecting directions result object: https://developers.google.com/maps/documentation/javascript/directions#InspectingResults
+* sample directions result: https://developers.google.com/maps/documentation/directions/#DirectionsResponses
+* waypoints: https://developers.google.com/maps/documentation/javascript/directions#Waypoints
+* draggable: https://developers.google.com/maps/documentation/javascript/directions#DraggableDirections
 
 **Places**
 * google maps API places library: https://developers.google.com/maps/documentation/javascript/places
 * google places API: https://developers.google.com/places/documentation/search
+
 
