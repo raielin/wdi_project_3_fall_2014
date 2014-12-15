@@ -1,6 +1,7 @@
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 var map;
+var infoWindow;
 
 function initialize() {
 
@@ -85,7 +86,20 @@ function initialize() {
   directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);
   directionsDisplay.setMap(map);
   directionsDisplay.setPanel(document.getElementById('steps'));
+
+  // requestPlaces();
 }
+
+// function requestPlaces() {
+//   var place = document.getElementById('place').value;
+//   var request = {
+
+//   }
+
+//   infowindow = new google.maps.InfoWindow();
+//   var service = new google.maps.places.PlacesService(map);
+//   service.nearbySearch(request, placesCallback);
+// }
 
 function calcRoute() {
   var start = document.getElementById('start').value;
@@ -95,14 +109,65 @@ function calcRoute() {
       destination: end,
       travelMode: google.maps.TravelMode.DRIVING
   };
-
-  directionsService.route(request, callback);
+  directionsService.route(request, directionsCallback);
+  getBounds(start, end);
 }
 
-function callback(response, status) {
+function directionsCallback(response, status) {
   if (status == google.maps.DirectionsStatus.OK) {
     directionsDisplay.setDirections(response);
   }
+}
+
+// function placesCallback(results, status) {
+//   if (status == google.maps.places.PlacesServiceStatus.OK) {
+//     for (var i = 0; i < results.length; i++) {
+//       createMarker(results[i]);
+//     }
+//   }
+// }
+
+function boundsCallback(results, status) {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+    getGeo(results[0]);
+  }
+}
+
+function getGeo(place) {
+  debugger;
+  return place.geometry.location;
+}
+
+function getBounds(start, end) {
+  var startRequest = {
+    key: "AIzaSyCswDZpj7fM9qjPhs4jG7pKYZrdxb5bp90",
+    query: start
+  };
+
+  var endRequest = {
+    key: "AIzaSyCswDZpj7fM9qjPhs4jG7pKYZrdxb5bp90",
+    query: end
+  };
+
+  var startService = new google.maps.places.PlacesService(map);
+  var endService = new google.maps.places.PlacesService(map);
+  var endPoints = [];
+  endPoints.push(startService.textSearch(startRequest, boundsCallback))
+  endPoints.push(endService.textSearch(endRequest, boundsCallback))
+  debugger;
+}
+
+function createMarker(place) {
+  var placeLoc = place.geometry.location;
+  var marker = new google.maps.Marker({
+    map: map,
+    position: place.geometry.location
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.setContent(place.name);
+    infowindow.open(map, this);
+  });
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
