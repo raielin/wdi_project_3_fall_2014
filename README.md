@@ -15,6 +15,7 @@ Working files, initial API tests, code references, and app prototypes ONLY.
 **Angular**
 * performance: https://www.airpair.com/angularjs/posts/angularjs-performance-large-applications
 * style guides: https://github.com/mgechev/angularjs-style-guide
+* holly's gist re: grunt built: https://gist.github.com/HollyM021980/e2e0e244222f1d3cd39f
 
 **Rails**
 * rake db:migrate fails: https://medium.com/@bitadj/rake-db-migrate-fails-on-rails-v-4-2-0-betax-36ceae38da44
