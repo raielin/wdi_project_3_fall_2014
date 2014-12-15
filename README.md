@@ -31,6 +31,10 @@ Working files, initial API tests, code references, and app prototypes ONLY.
 * map styling: https://developers.google.com/maps/documentation/javascript/styling
 * lat/lng bounds class: https://developers.google.com/maps/documentation/javascript/reference#LatLngBounds
 * js reference: https://developers.google.com/maps/documentation/javascript/reference
+* working with geolocation
+  * part 1, basic geolocation: http://www.sitepoint.com/working-with-geolocation-and-google-maps-api/
+  * part 2, directions w/ geolocation: http://www.sitepoint.com/find-a-route-using-the-geolocation-and-the-google-maps-api/
+  * part 3, polylines: http://www.sitepoint.com/create-a-polyline-using-the-geolocation-and-the-google-maps-api/
 
 **Directions**
 * google maps API directions service: https://developers.google.com/maps/documentation/javascript/directions
