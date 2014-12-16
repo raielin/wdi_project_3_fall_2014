@@ -17,12 +17,24 @@ Working files, initial API tests, code references, and app prototypes ONLY.
 * style guides: https://github.com/mgechev/angularjs-style-guide
 * holly's gist re: grunt built: https://gist.github.com/HollyM021980/e2e0e244222f1d3cd39f
 * service vs. factory: http://viralpatel.net/blogs/angularjs-service-factory-tutorial/
+* https://www.airpair.com/angularjs/posts/top-10-mistakes-angularjs-developers-make
+* http://tylermcginnis.com/angularjs-factory-vs-service-vs-provider/
 
 **Rails**
 * rake db:migrate fails: https://medium.com/@bitadj/rake-db-migrate-fails-on-rails-v-4-2-0-betax-36ceae38da44
 
 **Bootstrap**
 * http://www.bootply.com/
+
+**Testing**
+* http://karma-runner.github.io/0.12/index.html
+* http://www.smashingmagazine.com/2014/10/07/introduction-to-unit-testing-in-angularjs/
+* https://www.airpair.com/angularjs/posts/testing-angular-with-karma
+* http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html
+* http://glennstovall.com/blog/2014/09/26/testing-angularjs-with-karma-plus-jasmine/
+* http://moduscreate.com/unit-testing-w-angularjs/
+* http://chariotsolutions.com/blog/post/angularjs-corner-ngmock-ngmocke2e-libraries/
+* https://docs.angularjs.org/api/ngMock
 
 
 ####Google API Documentation
